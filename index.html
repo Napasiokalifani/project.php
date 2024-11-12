@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Smart Keyless Entry</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            color: #333;
+            background-image: url('images 22.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 style="color:rgb(64, 14, 231)">Welcome to Smart Keyless car Entry system</h1>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Get Started</button>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="text" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            // Here you can add any validation or login logic you need
+            
+            // After successful login, redirect to the dashboard
+            window.location.href = 'dashboard.html'; // Change to your actual dashboard page
+        });
+    </script>
+</body>
+</html>
